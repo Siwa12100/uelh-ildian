@@ -1,20 +1,18 @@
 name: UelhIldian
-version: '${project.version}'
+version: '1.0-SNAPSHOT'
 main: valorium.uelhildian.UelhIldian
 api-version: '1.21'
 author: Valorium
-description: Plugin Uèlh Ildian avec client API
-website: https://valorium-mc.fr
+description: Système de Bilhetas Ildians pour Minecraft
 
 commands:
-  uelh:
-    description: Commande principale du plugin
-    usage: /uelh
-    permission: uelhildian.use
-    permission-message: "Vous n'avez pas la permission d'utiliser cette commande"
+  bilheta:
+    description: Gère le système de bilhetas Ildians
+    usage: /bilheta <setbouton|info|reload>
+    permission: uelh.bilheta.admin
+    aliases: [bilhetas, blt]
 
 permissions:
-  uelhildian.use:
-    description: Permet d'utiliser les commandes du plugin
-    default: true
-
+  uelh.bilheta.admin:
+    description: Permet de gérer le système de bilhetas
+    default: op
